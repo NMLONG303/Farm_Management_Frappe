@@ -1,0 +1,70 @@
+2026-05-26 04:56:57,799 INFO ipython === bench console session ===
+2026-05-26 04:56:57,800 INFO ipython import frappe
+2026-05-26 04:56:57,801 INFO ipython print(frappe.db.exists(DocType, Location))
+2026-05-26 04:56:57,801 INFO ipython === session end ===
+2026-05-26 07:09:10,535 INFO ipython === bench console session ===
+2026-05-26 07:09:10,536 INFO ipython import frappe 
+2026-05-26 07:09:10,537 INFO ipython ds = frappe.get_single('Domain Settings') 
+2026-05-26 07:09:10,538 INFO ipython ds.append('active_domains', {'domain': 'Agriculture'}) 
+2026-05-26 07:09:10,538 INFO ipython ds.save() 
+2026-05-26 07:09:10,539 INFO ipython print('Domain enabled')
+2026-05-26 07:09:10,539 INFO ipython === session end ===
+2026-05-26 07:09:35,989 INFO ipython === bench console session ===
+2026-05-26 07:09:35,990 INFO ipython import frappe 
+2026-05-26 07:09:35,990 INFO ipython print(frappe.db.exists('Domain', 'Agriculture')) 
+2026-05-26 07:09:35,991 INFO ipython print(frappe.get_active_domains())
+2026-05-26 07:09:35,991 INFO ipython === session end ===
+2026-05-26 07:09:57,479 INFO ipython === bench console session ===
+2026-05-26 07:09:57,479 INFO ipython import frappe 
+2026-05-26 07:09:57,480 INFO ipython print(frappe.db.get_all('Has Domain', pluck='domain')) 
+2026-05-26 07:09:57,480 INFO ipython print(frappe.db.get_all('Domain', pluck='name'))
+2026-05-26 07:09:57,481 INFO ipython === session end ===
+2026-05-26 07:10:27,300 INFO ipython === bench console session ===
+2026-05-26 07:10:27,300 INFO ipython import frappe 
+2026-05-26 07:10:27,301 INFO ipython ds = frappe.get_single('Domain Settings') 
+2026-05-26 07:10:27,302 INFO ipython ds.set_active_domains(['Agriculture']) 
+2026-05-26 07:10:27,302 INFO ipython print('Active domains:', frappe.get_active_domains())
+2026-05-26 07:10:27,303 INFO ipython === session end ===
+2026-05-26 07:10:51,174 INFO ipython === bench console session ===
+2026-05-26 07:10:51,175 INFO ipython import frappe 
+2026-05-26 07:10:51,176 INFO ipython frappe.clear_cache() 
+2026-05-26 07:10:51,176 INFO ipython print('Cache cleared')
+2026-05-26 07:10:51,177 INFO ipython === session end ===
+2026-05-26 07:11:11,145 INFO ipython === bench console session ===
+2026-05-26 07:11:11,146 INFO ipython import frappe 
+2026-05-26 07:11:11,147 INFO ipython print(frappe.db.get_all('Has Domain', pluck='domain')) 
+2026-05-26 07:11:11,148 INFO ipython print('Roles:', frappe.db.get_all('Role', pluck='name', filters={'name': ['in', ['Agriculture Manager', 'Agriculture User']]})) 
+2026-05-26 07:11:11,148 INFO ipython print('Tables exist:', frappe.db.exists('DocType', 'Crop') and frappe.db.exists('DocType', 'Weather'))
+2026-05-26 07:11:11,149 INFO ipython === session end ===
+2026-05-26 07:11:33,351 INFO ipython === bench console session ===
+2026-05-26 07:11:33,353 INFO ipython import frappe 
+2026-05-26 07:11:33,353 INFO ipython print('All Has Domain:', frappe.db.get_all('Has Domain', fields=['parent', 'domain']))
+2026-05-26 07:11:33,354 INFO ipython === session end ===
+2026-05-26 07:12:48,126 INFO ipython === bench console session ===
+2026-05-26 07:12:48,126 INFO ipython import frappe 
+2026-05-26 07:12:48,127 INFO ipython from agriculture.agriculture.setup import setup_agriculture 
+2026-05-26 07:12:48,128 INFO ipython setup_agriculture() 
+2026-05-26 07:12:48,128 INFO ipython print('Setup 1 done') 
+2026-05-26 07:12:48,128 INFO ipython ds = frappe.get_single('Domain Settings') 
+2026-05-26 07:12:48,129 INFO ipython ds.set_active_domains(['Agriculture']) 
+2026-05-26 07:12:48,129 INFO ipython print('Setup 2 done') 
+2026-05-26 07:12:48,130 INFO ipython import frappe.utils.install 
+2026-05-26 07:12:48,130 INFO ipython frappe.utils.install.add_to_installed_apps('agriculture') 
+2026-05-26 07:12:48,131 INFO ipython print('Setup 3 done') 
+2026-05-26 07:12:48,131 INFO ipython frappe.clear_cache() 
+2026-05-26 07:12:48,132 INFO ipython print('Complete! Active domains:', frappe.get_active_domains())
+2026-05-26 07:12:48,132 INFO ipython === session end ===
+2026-05-26 07:13:06,387 INFO ipython === bench console session ===
+2026-05-26 07:13:06,388 INFO ipython import frappe 
+2026-05-26 07:13:06,389 INFO ipython print('Has Domain:', frappe.db.get_all('Has Domain', pluck='domain')) 
+2026-05-26 07:13:06,389 INFO ipython print('Active domains:', frappe.get_active_domains()) 
+2026-05-26 07:13:06,390 INFO ipython print('Roles:', frappe.db.get_all('Role', pluck='name', filters={'name': ['in', ['Agriculture Manager', 'Agriculture User']]})) 
+2026-05-26 07:13:06,390 INFO ipython print('Analysis criteria count:', frappe.db.count('Agriculture Analysis Criteria')) 
+2026-05-26 07:13:06,390 INFO ipython print('Crop table exists:', frappe.db.exists('DocType', 'Crop'))
+2026-05-26 07:13:06,391 INFO ipython === session end ===
+2026-05-26 07:18:09,147 INFO ipython === bench console session ===
+2026-05-26 07:18:09,149 INFO ipython import frappe 
+2026-05-26 07:18:09,150 INFO ipython print('Active domains:', frappe.get_active_domains()) 
+2026-05-26 07:18:09,151 INFO ipython print('Roles:', frappe.db.get_all('Role', pluck='name', filters={'name': ['in', ['Agriculture Manager', 'Agriculture User']]})) 
+2026-05-26 07:18:09,151 INFO ipython print('Analysis criteria:', frappe.db.count('Agriculture Analysis Criteria'))
+2026-05-26 07:18:09,152 INFO ipython === session end ===

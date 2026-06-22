@@ -1,0 +1,144 @@
+2026-05-26 03:49:09,700 DEBUG cd beeyond && uv venv env --seed --python python3
+2026-05-26 03:49:14,037 LOG Getting frappe
+2026-05-26 03:49:14,037 DEBUG cd beeyond/apps && git clone https://github.com/frappe/frappe.git --branch version-15 --depth 1 --origin upstream
+2026-05-26 03:50:29,134 LOG Installing frappe
+2026-05-26 03:50:29,155 DEBUG cd /workspace/development/beeyond && uv pip install --quiet --upgrade -e /workspace/development/beeyond/apps/frappe  --python /workspace/development/beeyond/env/bin/python
+2026-05-26 03:52:27,809 DEBUG cd /workspace/development/beeyond/apps/frappe && yarn install --check-files
+2026-05-26 03:57:17,365 DEBUG cd beeyond && bench build
+2026-05-26 03:57:17,554 INFO /home/frappe/.local/bin/bench build
+2026-05-26 03:59:15,864 LOG setting up backups
+2026-05-26 03:59:15,895 LOG backups were set up
+2026-05-26 03:59:15,895 INFO Bench beeyond initialized
+2026-05-26 03:59:42,374 INFO /home/frappe/.local/bin/bench set-config -g db_host mariadb
+2026-05-26 03:59:53,898 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2026-05-26 04:00:05,949 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2026-05-26 04:00:14,514 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-socketio:6379
+2026-05-26 04:00:36,832 INFO /home/frappe/.local/bin/bench new-site bfarm.localhost --no-mariadb-socket
+2026-05-26 04:01:38,294 INFO /home/frappe/.local/bin/bench new-site bfarm.localhost --mariadb-user-host-login-scope=%
+2026-05-26 04:02:36,037 INFO /home/frappe/.local/bin/bench new-site bfarm.localhost --mariadb-user-host-login-scope=% --force
+2026-05-26 04:02:51,355 INFO /home/frappe/.local/bin/bench new-site bfarm.localhost --mariadb-user-host-login-scope=% --force
+2026-05-26 04:09:29,446 INFO /home/frappe/.local/bin/bench --site bfarm.localhost set-config developer_mode 1
+2026-05-26 04:09:44,815 INFO /home/frappe/.local/bin/bench --site bfarm.localhost clear-cache
+2026-05-26 04:09:59,899 INFO /home/frappe/.local/bin/bench get-app --branch version-15 --resolve-deps erpnext
+2026-05-26 04:10:01,130 LOG Getting erpnext
+2026-05-26 04:10:01,130 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-15 --depth 1 --origin upstream
+2026-05-26 04:11:28,807 LOG Installing erpnext
+2026-05-26 04:11:28,819 DEBUG cd /workspace/development/beeyond && uv pip install --quiet --upgrade -e /workspace/development/beeyond/apps/erpnext  --python /workspace/development/beeyond/env/bin/python
+2026-05-26 04:12:02,825 DEBUG cd /workspace/development/beeyond/apps/erpnext && yarn install --check-files
+2026-05-26 04:12:04,244 DEBUG bench build --app erpnext
+2026-05-26 04:12:04,455 INFO /home/frappe/.local/bin/bench build --app erpnext
+2026-05-26 04:13:34,228 INFO /home/frappe/.local/bin/bench get-app agriculture
+2026-05-26 04:13:35,014 LOG Getting agriculture
+2026-05-26 04:13:35,014 DEBUG cd ./apps && git clone https://github.com/frappe/agriculture.git  --depth 1 --origin upstream
+2026-05-26 04:13:37,864 LOG Installing agriculture
+2026-05-26 04:13:37,875 DEBUG cd /workspace/development/beeyond && uv pip install --quiet --upgrade -e /workspace/development/beeyond/apps/agriculture  --python /workspace/development/beeyond/env/bin/python
+2026-05-26 04:14:18,612 DEBUG bench build --app agriculture
+2026-05-26 04:14:18,856 INFO /home/frappe/.local/bin/bench build --app agriculture
+2026-05-26 04:15:41,291 INFO /home/frappe/.local/bin/bench --site bfarm.localhost install-app erpnext
+2026-05-26 04:19:20,827 INFO /home/frappe/.local/bin/bench --site bfarm.localhost install-app agriculture
+2026-05-26 04:20:30,239 INFO /home/frappe/.local/bin/bench start
+2026-05-26 04:20:30,892 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-05-26 04:20:30,907 INFO /home/frappe/.local/bin/bench schedule
+2026-05-26 04:20:30,917 INFO /home/frappe/.local/bin/bench watch
+2026-05-26 04:20:30,945 INFO /home/frappe/.local/bin/bench worker
+2026-05-26 04:28:06,349 INFO /home/frappe/.local/bin/bench --site bfarm.localhost install-app agriculture
+2026-05-26 04:28:27,063 INFO /home/frappe/.local/bin/bench start
+2026-05-26 04:28:27,640 INFO /home/frappe/.local/bin/bench watch
+2026-05-26 04:28:27,640 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-05-26 04:28:27,648 INFO /home/frappe/.local/bin/bench schedule
+2026-05-26 04:28:27,694 INFO /home/frappe/.local/bin/bench worker
+2026-05-26 04:35:13,282 INFO /home/frappe/.local/bin/bench --site bfarm.localhost clear-cache
+2026-05-26 04:35:44,255 INFO /home/frappe/.local/bin/bench migrate
+2026-05-26 04:37:12,687 INFO /home/frappe/.local/bin/bench start
+2026-05-26 04:37:13,176 INFO /home/frappe/.local/bin/bench worker
+2026-05-26 04:37:13,178 INFO /home/frappe/.local/bin/bench schedule
+2026-05-26 04:37:13,178 INFO /home/frappe/.local/bin/bench watch
+2026-05-26 04:37:13,224 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-05-26 04:39:03,813 INFO /home/frappe/.local/bin/bench --site bfarm.localhost install-app agriculture
+2026-05-26 04:39:36,947 INFO /home/frappe/.local/bin/bench start
+2026-05-26 04:39:37,496 INFO /home/frappe/.local/bin/bench watch
+2026-05-26 04:39:37,509 INFO /home/frappe/.local/bin/bench schedule
+2026-05-26 04:39:37,509 INFO /home/frappe/.local/bin/bench worker
+2026-05-26 04:39:37,531 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-05-26 04:42:54,633 INFO /home/frappe/.local/bin/bench build --apps frappe,erpnext,agriculture
+2026-05-26 04:45:17,874 INFO /home/frappe/.local/bin/bench start
+2026-05-26 04:45:18,309 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-05-26 04:45:18,312 INFO /home/frappe/.local/bin/bench worker
+2026-05-26 04:45:18,320 INFO /home/frappe/.local/bin/bench schedule
+2026-05-26 04:45:18,338 INFO /home/frappe/.local/bin/bench watch
+2026-05-26 04:55:01,922 INFO /home/frappe/.local/bin/bench --site bfarm.localhost list-apps
+2026-05-26 04:55:25,848 INFO /home/frappe/.local/bin/bench --site bfarm.localhost console --python import
+2026-05-26 04:55:41,496 INFO /home/frappe/.local/bin/bench --site bfarm.localhost run-patch /tmp/check_location.py
+2026-05-26 04:55:59,939 INFO /home/frappe/.local/bin/bench --site bfarm.localhost console
+2026-05-26 04:57:54,793 INFO /home/frappe/.local/bin/bench --site bfarm.localhost execute frappe.utils.fixtures:print --args [test]
+2026-05-26 06:38:23,932 INFO /home/frappe/.local/bin/bench --site bfarm.localhost migrate
+2026-05-26 06:42:35,750 INFO /home/frappe/.local/bin/bench --site bfarm.localhost migrate
+2026-05-26 06:44:19,994 INFO /home/frappe/.local/bin/bench build
+2026-05-26 06:47:25,106 INFO /home/frappe/.local/bin/bench start
+2026-05-26 06:47:25,681 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-05-26 06:47:25,685 INFO /home/frappe/.local/bin/bench schedule
+2026-05-26 06:47:25,690 INFO /home/frappe/.local/bin/bench worker
+2026-05-26 06:47:25,716 INFO /home/frappe/.local/bin/bench watch
+2026-05-26 07:01:05,111 INFO /home/frappe/.local/bin/bench --site bfarm.localhost migrate
+2026-05-26 07:02:56,625 INFO /home/frappe/.local/bin/bench build
+2026-05-26 07:05:28,583 INFO /home/frappe/.local/bin/bench --site bfarm.localhost execute agriculture.agriculture.setup.setup_agriculture
+2026-05-26 07:06:00,301 INFO /home/frappe/.local/bin/bench --site bfarm.localhost execute frappe.core.doctype.domain_settings.domain_settings.set_active_domains --kwargs {domains:
+2026-05-26 07:07:50,901 INFO /home/frappe/.local/bin/bench --site bfarm.localhost execute frappe.core.doctype.domain_settings.domain_settings.DomainSettings.set_active_domains
+2026-05-26 07:08:18,983 INFO /home/frappe/.local/bin/bench --site bfarm.localhost console --no-auto-repl
+2026-05-26 07:08:30,844 INFO /home/frappe/.local/bin/bench console --help
+2026-05-26 07:08:44,978 INFO /home/frappe/.local/bin/bench --site bfarm.localhost console
+2026-05-26 07:09:23,637 INFO /home/frappe/.local/bin/bench --site bfarm.localhost console
+2026-05-26 07:09:45,724 INFO /home/frappe/.local/bin/bench --site bfarm.localhost console
+2026-05-26 07:10:07,745 INFO /home/frappe/.local/bin/bench --site bfarm.localhost console
+2026-05-26 07:10:34,876 INFO /home/frappe/.local/bin/bench --site bfarm.localhost console
+2026-05-26 07:10:59,566 INFO /home/frappe/.local/bin/bench --site bfarm.localhost console
+2026-05-26 07:11:21,724 INFO /home/frappe/.local/bin/bench --site bfarm.localhost console
+2026-05-26 07:12:19,942 INFO /home/frappe/.local/bin/bench --site bfarm.localhost console
+2026-05-26 07:12:56,313 INFO /home/frappe/.local/bin/bench --site bfarm.localhost console
+2026-05-26 07:13:27,459 INFO /home/frappe/.local/bin/bench start
+2026-05-26 07:13:28,061 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-05-26 07:13:28,066 INFO /home/frappe/.local/bin/bench watch
+2026-05-26 07:13:28,090 INFO /home/frappe/.local/bin/bench worker
+2026-05-26 07:13:28,109 INFO /home/frappe/.local/bin/bench schedule
+2026-05-26 07:14:37,261 INFO /home/frappe/.local/bin/bench start
+2026-05-26 07:14:37,839 INFO /home/frappe/.local/bin/bench watch
+2026-05-26 07:14:37,845 INFO /home/frappe/.local/bin/bench schedule
+2026-05-26 07:14:37,855 INFO /home/frappe/.local/bin/bench worker
+2026-05-26 07:14:37,895 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-05-26 07:15:11,976 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-05-26 07:16:24,340 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-05-26 07:17:56,872 INFO /home/frappe/.local/bin/bench --site bfarm.localhost console
+2026-05-27 01:45:25,389 INFO /home/frappe/.local/bin/bench start
+2026-05-27 01:45:26,105 INFO /home/frappe/.local/bin/bench schedule
+2026-05-27 01:45:26,105 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-05-27 01:45:26,113 INFO /home/frappe/.local/bin/bench watch
+2026-05-27 01:45:26,126 INFO /home/frappe/.local/bin/bench worker
+2026-06-22 01:46:19,373 INFO /home/frappe/.local/bin/bench start
+2026-06-22 01:46:20,636 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-06-22 01:46:20,643 INFO /home/frappe/.local/bin/bench watch
+2026-06-22 01:46:20,649 INFO /home/frappe/.local/bin/bench schedule
+2026-06-22 01:46:20,668 INFO /home/frappe/.local/bin/bench worker
+2026-06-22 03:56:01,594 INFO /home/frappe/.local/bin/bench clear-cache
+2026-06-22 03:57:03,345 INFO /home/frappe/.local/bin/bench --site bfarm.localhost clear-cache
+2026-06-22 03:57:23,382 INFO /home/frappe/.local/bin/bench start
+2026-06-22 03:57:23,959 INFO /home/frappe/.local/bin/bench schedule
+2026-06-22 03:57:23,959 INFO /home/frappe/.local/bin/bench worker
+2026-06-22 03:57:23,961 INFO /home/frappe/.local/bin/bench watch
+2026-06-22 03:57:23,964 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-06-22 04:03:38,543 INFO /home/frappe/.local/bin/bench --site bfarm.localhost migrate
+2026-06-22 04:06:24,308 INFO /home/frappe/.local/bin/bench start
+2026-06-22 04:06:24,794 INFO /home/frappe/.local/bin/bench watch
+2026-06-22 04:06:24,794 INFO /home/frappe/.local/bin/bench schedule
+2026-06-22 04:06:24,797 INFO /home/frappe/.local/bin/bench worker
+2026-06-22 04:06:24,802 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-06-22 04:19:36,282 INFO /home/frappe/.local/bin/bench start
+2026-06-22 04:19:36,905 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-06-22 04:19:36,913 INFO /home/frappe/.local/bin/bench watch
+2026-06-22 04:19:36,944 INFO /home/frappe/.local/bin/bench schedule
+2026-06-22 04:19:37,004 INFO /home/frappe/.local/bin/bench worker
+2026-06-22 04:26:54,370 INFO /home/frappe/.local/bin/bench --site bfarm.localhost clear-cache
+2026-06-22 04:27:11,163 INFO /home/frappe/.local/bin/bench start
+2026-06-22 04:27:11,565 INFO /home/frappe/.local/bin/bench worker
+2026-06-22 04:27:11,566 INFO /home/frappe/.local/bin/bench schedule
+2026-06-22 04:27:11,575 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-06-22 04:27:11,585 INFO /home/frappe/.local/bin/bench watch

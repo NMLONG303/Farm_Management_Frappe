@@ -1,0 +1,988 @@
+2026-06-22 04:00:41,975 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'txt': 'vi', 'doctype': 'Language', 'ignore_user_permissions': '0', 'reference_doctype': 'User', 'page_length': '10', 'cmd': 'frappe.desk.search.search_link'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:42,074 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'txt': 'vi', 'doctype': 'Language', 'ignore_user_permissions': '0', 'reference_doctype': 'User', 'page_length': '10', 'cmd': 'frappe.desk.search.search_link'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:42,109 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'txt': 'vi', 'doctype': 'Language', 'ignore_user_permissions': '0', 'reference_doctype': 'User', 'page_length': '10', 'cmd': 'frappe.desk.search.search_link'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:42,143 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'txt': 'vi', 'doctype': 'Language', 'ignore_user_permissions': '0', 'reference_doctype': 'User', 'page_length': '10', 'cmd': 'frappe.desk.search.search_link'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:47,351 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'doc': '{"name":"Administrator","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 11:23:34.870430","modified_by":"Administrator","docstatus":0,"idx":0,"enabled":1,"email":"admin@example.com","first_name":"Administrator","full_name":"Administrator","username":"administrator","time_zone":"Asia/Ho_Chi_Minh","send_welcome_email":1,"unsubscribed":0,"mute_sounds":0,"desk_theme":"Light","search_bar":1,"notifications":1,"list_sidebar":1,"bulk_actions":1,"view_switcher":1,"form_sidebar":1,"timeline":1,"dashboard":1,"new_password":"","logout_all_sessions":1,"document_follow_notify":0,"document_follow_frequency":"Daily","follow_created_documents":0,"follow_commented_documents":0,"follow_liked_documents":0,"follow_assigned_documents":0,"follow_shared_documents":0,"thread_notify":0,"send_me_a_copy":0,"allowed_in_mentions":1,"simultaneous_sessions":2,"last_ip":"172.19.0.1","login_after":0,"user_type":"System User","last_active":"2026-06-22 10:59:57.081205","login_before":0,"bypass_restrict_ip_check_if_2fa_enabled":0,"last_login":"2026-06-22 08:48:17.836835","last_known_versions":"{\\"frappe\\": {\\"title\\": \\"Frappe Framework\\", \\"description\\": \\"Full stack web framework with Python, Javascript, MariaDB, Redis, Node\\", \\"branch\\": \\"version-15\\", \\"version\\": \\"15.108.0\\"}, \\"erpnext\\": {\\"title\\": \\"ERPNext\\", \\"description\\": \\"ERP made simple\\", \\"branch\\": \\"version-15\\", \\"version\\": \\"15.108.3\\"}, \\"agriculture\\": {\\"title\\": \\"Agriculture\\", \\"description\\": \\"Agriculture\\", \\"branch\\": \\"develop\\", \\"version\\": \\"0.0.1\\"}}","onboarding_status":"{}","doctype":"User","social_logins":[],"roles":[{"name":"62pnkans80","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":1,"role":"Maintenance Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62pp4v5ngn","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":2,"role":"Sales Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62p2mkk9q8","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":3,"role":"Sales Master Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62p814pcfq","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":4,"role":"Purchase Master Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62psrpleh4","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":5,"role":"Purchase Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62posmqdim","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":6,"role":"Maintenance User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62pe9qekuj","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":7,"role":"Sales User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62pa676hr2","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":8,"role":"Accounts Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62pvl9q7hl","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":9,"role":"Accounts User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62pqpo14qh","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":10,"role":"Purchase User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62prt43gr3","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":11,"role":"Newsletter Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62p30shkcr","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":12,"role":"Knowledge Base Contributor","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62pqiac9jv","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":13,"role":"Knowledge Base Editor","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62p1cfm0j4","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":14,"role":"Blogger","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62pcj1opdo","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":15,"role":"Translator","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62p56q81bp","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":16,"role":"Prepared Report User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62pl5ufvgq","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":17,"role":"Inbox User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62p2r4citb","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":18,"role":"Script Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62ps0rhei5","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":19,"role":"Report Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62psrbbt0g","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":20,"role":"Workspace Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62p85e160d","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":21,"role":"Dashboard Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62p4t2oonm","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":22,"role":"Website Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62prfullq5","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":23,"role":"System Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2sdvs91k","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":24,"role":"Agriculture Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2qanfbqk","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":25,"role":"Academics User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr208ecl9m","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":26,"role":"HR User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2f73t6r8","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":27,"role":"Manufacturing Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2jho4ajl","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":28,"role":"Stock Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2b5gnq3v","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":29,"role":"Projects User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2jmv0391","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":30,"role":"Projects Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2v5g2pcp","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":31,"role":"Manufacturing User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2vs9h65u","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":32,"role":"Auditor","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2hn83ctg","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":33,"role":"Delivery Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2v5bc5os","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":34,"role":"Fulfillment User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr26u15nkc","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":35,"role":"Agriculture User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2i002obu","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":36,"role":"Fleet Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2v6cnkem","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":37,"role":"Support Team","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr295o9eh4","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":38,"role":"Stock User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2nh74bf6","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":39,"role":"Quality Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2olfogfv","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":40,"role":"Delivery User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2rtqu00f","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":41,"role":"Analytics","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2s46na9n","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":42,"role":"HR Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr20jloqfn","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":43,"role":"Item Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"}],"block_modules":[],"defaults":[],"user_emails":[],"__onload":{"all_modules":["Accounts","Agriculture","Assets","Automation","Bulk Transaction","Buying","CRM","Communication","Contacts","Core","Custom","Desk","EDI","ERPNext Integrations","Email","Geo","Integrations","Maintenance","Manufacturing","Portal","Printing","Projects","Quality Management","Regional","Selling","Setup","Social","Stock","Subcontracting","Support","Telephony","Utilities","Website","Workflow"]},"__last_sync_on":"2026-06-22T04:00:22.665Z","language":"vi","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:47,387 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'doc': '{"name":"Administrator","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 11:23:34.870430","modified_by":"Administrator","docstatus":0,"idx":0,"enabled":1,"email":"admin@example.com","first_name":"Administrator","full_name":"Administrator","username":"administrator","time_zone":"Asia/Ho_Chi_Minh","send_welcome_email":1,"unsubscribed":0,"mute_sounds":0,"desk_theme":"Light","search_bar":1,"notifications":1,"list_sidebar":1,"bulk_actions":1,"view_switcher":1,"form_sidebar":1,"timeline":1,"dashboard":1,"new_password":"","logout_all_sessions":1,"document_follow_notify":0,"document_follow_frequency":"Daily","follow_created_documents":0,"follow_commented_documents":0,"follow_liked_documents":0,"follow_assigned_documents":0,"follow_shared_documents":0,"thread_notify":0,"send_me_a_copy":0,"allowed_in_mentions":1,"simultaneous_sessions":2,"last_ip":"172.19.0.1","login_after":0,"user_type":"System User","last_active":"2026-06-22 10:59:57.081205","login_before":0,"bypass_restrict_ip_check_if_2fa_enabled":0,"last_login":"2026-06-22 08:48:17.836835","last_known_versions":"{\\"frappe\\": {\\"title\\": \\"Frappe Framework\\", \\"description\\": \\"Full stack web framework with Python, Javascript, MariaDB, Redis, Node\\", \\"branch\\": \\"version-15\\", \\"version\\": \\"15.108.0\\"}, \\"erpnext\\": {\\"title\\": \\"ERPNext\\", \\"description\\": \\"ERP made simple\\", \\"branch\\": \\"version-15\\", \\"version\\": \\"15.108.3\\"}, \\"agriculture\\": {\\"title\\": \\"Agriculture\\", \\"description\\": \\"Agriculture\\", \\"branch\\": \\"develop\\", \\"version\\": \\"0.0.1\\"}}","onboarding_status":"{}","doctype":"User","social_logins":[],"roles":[{"name":"62pnkans80","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":1,"role":"Maintenance Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62pp4v5ngn","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":2,"role":"Sales Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62p2mkk9q8","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":3,"role":"Sales Master Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62p814pcfq","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":4,"role":"Purchase Master Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62psrpleh4","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":5,"role":"Purchase Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62posmqdim","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":6,"role":"Maintenance User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62pe9qekuj","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":7,"role":"Sales User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62pa676hr2","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":8,"role":"Accounts Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62pvl9q7hl","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":9,"role":"Accounts User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62pqpo14qh","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":10,"role":"Purchase User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62prt43gr3","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":11,"role":"Newsletter Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62p30shkcr","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":12,"role":"Knowledge Base Contributor","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62pqiac9jv","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":13,"role":"Knowledge Base Editor","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62p1cfm0j4","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":14,"role":"Blogger","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62pcj1opdo","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":15,"role":"Translator","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62p56q81bp","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":16,"role":"Prepared Report User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62pl5ufvgq","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":17,"role":"Inbox User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62p2r4citb","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":18,"role":"Script Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62ps0rhei5","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":19,"role":"Report Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62psrbbt0g","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":20,"role":"Workspace Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62p85e160d","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":21,"role":"Dashboard Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62p4t2oonm","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":22,"role":"Website Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"62prfullq5","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":23,"role":"System Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2sdvs91k","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":24,"role":"Agriculture Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2qanfbqk","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":25,"role":"Academics User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr208ecl9m","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":26,"role":"HR User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2f73t6r8","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":27,"role":"Manufacturing Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2jho4ajl","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":28,"role":"Stock Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2b5gnq3v","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":29,"role":"Projects User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2jmv0391","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":30,"role":"Projects Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2v5g2pcp","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":31,"role":"Manufacturing User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2vs9h65u","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":32,"role":"Auditor","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2hn83ctg","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":33,"role":"Delivery Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2v5bc5os","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":34,"role":"Fulfillment User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr26u15nkc","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":35,"role":"Agriculture User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2i002obu","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":36,"role":"Fleet Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2v6cnkem","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":37,"role":"Support Team","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr295o9eh4","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":38,"role":"Stock User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2nh74bf6","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":39,"role":"Quality Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2olfogfv","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":40,"role":"Delivery User","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2rtqu00f","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":41,"role":"Analytics","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr2s46na9n","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":42,"role":"HR Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"},{"name":"dr20jloqfn","owner":"Administrator","creation":"2026-05-26 09:35:28.097244","modified":"2026-05-26 09:48:43.470764","modified_by":"Administrator","docstatus":0,"idx":43,"role":"Item Manager","parent":"Administrator","parentfield":"roles","parenttype":"User","doctype":"Has Role"}],"block_modules":[],"defaults":[],"user_emails":[],"__onload":{"all_modules":["Accounts","Agriculture","Assets","Automation","Bulk Transaction","Buying","CRM","Communication","Contacts","Core","Custom","Desk","EDI","ERPNext Integrations","Email","Geo","Integrations","Maintenance","Manufacturing","Portal","Printing","Projects","Quality Management","Regional","Selling","Setup","Social","Stock","Subcontracting","Support","Telephony","Utilities","Website","Workflow"]},"__last_sync_on":"2026-06-22T04:00:22.665Z","language":"vi","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:48,018 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:48,086 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:48,149 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:48,213 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:48,279 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:48,338 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:48,402 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:48,466 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:48,536 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:48,609 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:48,666 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:48,719 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:48,775 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:48,824 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:48,878 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:48,924 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:48,973 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:49,033 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:49,096 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:49,157 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:49,207 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:49,257 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:49,302 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:00:49,331 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:01:10,251 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.desk.desktop.get_workspace_sidebar_items'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:01:10,305 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.desk.desktop.get_workspace_sidebar_items'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:01:10,339 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.desk.desktop.get_workspace_sidebar_items'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:01:10,370 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.desk.desktop.get_workspace_sidebar_items'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:01:10,401 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.desk.desktop.get_workspace_sidebar_items'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:01:10,431 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.desk.desktop.get_workspace_sidebar_items'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:01:10,465 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.desk.desktop.get_workspace_sidebar_items'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:01:10,500 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.desk.desktop.get_workspace_sidebar_items'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte

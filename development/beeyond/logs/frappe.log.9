@@ -1,0 +1,988 @@
+2026-06-22 04:08:13,943 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'page': '{"name":"Build","title":"Build","for_user":"","parent_page":"","content":"[{\\"id\\":\\"5nnLaQeoFa\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Get started</b><br></span>\\",\\"col\\":12}},{\\"id\\":\\"HXRmktXYHy\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"DocType\\",\\"col\\":3}},{\\"id\\":\\"pYALX3MwBW\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Customize Form\\",\\"col\\":3}},{\\"id\\":\\"XC78DuYB65\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Report\\",\\"col\\":3}},{\\"id\\":\\"XPm50Ppq3J\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Client Script\\",\\"col\\":3}},{\\"id\\":\\"yoU6nWiT83\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Server Script\\",\\"col\\":3}},{\\"id\\":\\"5UgFESBY0N\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Print Format Builder\\",\\"col\\":3}},{\\"id\\":\\"0gE0s-S70E\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"System Settings\\",\\"col\\":3}},{\\"id\\":\\"62hseENHbd\\",\\"type\\":\\"spacer\\",\\"data\\":{\\"col\\":12}},{\\"id\\":\\"tOCrOgLW1G\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Components to build your app</b></span>\\",\\"col\\":12}},{\\"id\\":\\"cJ6CVsa8qW\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Models\\",\\"col\\":4}},{\\"id\\":\\"MmEJpjEdGR\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Views\\",\\"col\\":4}},{\\"id\\":\\"2ZdtgxQZqq\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Customization\\",\\"col\\":4}},{\\"id\\":\\"NPFolijIcb\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Scripting\\",\\"col\\":4}},{\\"id\\":\\"BIHjudL0T_\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Modules\\",\\"col\\":4}},{\\"id\\":\\"iK3JQ9RXJE\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Packages\\",\\"col\\":4}},{\\"id\\":\\"TiO9FCUUeC\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"System Logs\\",\\"col\\":4}}]","public":1,"module":"Core","icon":"tool","indicator_color":"light-blue","is_hidden":0,"label":"Build","is_editable":true,"selected":true}', 'cmd': 'frappe.desk.desktop.get_desktop_page'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:14,117 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'page': '{"name":"Build","title":"Build","for_user":"","parent_page":"","content":"[{\\"id\\":\\"5nnLaQeoFa\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Get started</b><br></span>\\",\\"col\\":12}},{\\"id\\":\\"HXRmktXYHy\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"DocType\\",\\"col\\":3}},{\\"id\\":\\"pYALX3MwBW\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Customize Form\\",\\"col\\":3}},{\\"id\\":\\"XC78DuYB65\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Report\\",\\"col\\":3}},{\\"id\\":\\"XPm50Ppq3J\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Client Script\\",\\"col\\":3}},{\\"id\\":\\"yoU6nWiT83\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Server Script\\",\\"col\\":3}},{\\"id\\":\\"5UgFESBY0N\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Print Format Builder\\",\\"col\\":3}},{\\"id\\":\\"0gE0s-S70E\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"System Settings\\",\\"col\\":3}},{\\"id\\":\\"62hseENHbd\\",\\"type\\":\\"spacer\\",\\"data\\":{\\"col\\":12}},{\\"id\\":\\"tOCrOgLW1G\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Components to build your app</b></span>\\",\\"col\\":12}},{\\"id\\":\\"cJ6CVsa8qW\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Models\\",\\"col\\":4}},{\\"id\\":\\"MmEJpjEdGR\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Views\\",\\"col\\":4}},{\\"id\\":\\"2ZdtgxQZqq\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Customization\\",\\"col\\":4}},{\\"id\\":\\"NPFolijIcb\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Scripting\\",\\"col\\":4}},{\\"id\\":\\"BIHjudL0T_\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Modules\\",\\"col\\":4}},{\\"id\\":\\"iK3JQ9RXJE\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Packages\\",\\"col\\":4}},{\\"id\\":\\"TiO9FCUUeC\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"System Logs\\",\\"col\\":4}}]","public":1,"module":"Core","icon":"tool","indicator_color":"light-blue","is_hidden":0,"label":"Build","is_editable":true,"selected":true}', 'cmd': 'frappe.desk.desktop.get_desktop_page'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:14,146 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'page': '{"name":"Build","title":"Build","for_user":"","parent_page":"","content":"[{\\"id\\":\\"5nnLaQeoFa\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Get started</b><br></span>\\",\\"col\\":12}},{\\"id\\":\\"HXRmktXYHy\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"DocType\\",\\"col\\":3}},{\\"id\\":\\"pYALX3MwBW\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Customize Form\\",\\"col\\":3}},{\\"id\\":\\"XC78DuYB65\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Report\\",\\"col\\":3}},{\\"id\\":\\"XPm50Ppq3J\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Client Script\\",\\"col\\":3}},{\\"id\\":\\"yoU6nWiT83\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Server Script\\",\\"col\\":3}},{\\"id\\":\\"5UgFESBY0N\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Print Format Builder\\",\\"col\\":3}},{\\"id\\":\\"0gE0s-S70E\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"System Settings\\",\\"col\\":3}},{\\"id\\":\\"62hseENHbd\\",\\"type\\":\\"spacer\\",\\"data\\":{\\"col\\":12}},{\\"id\\":\\"tOCrOgLW1G\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Components to build your app</b></span>\\",\\"col\\":12}},{\\"id\\":\\"cJ6CVsa8qW\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Models\\",\\"col\\":4}},{\\"id\\":\\"MmEJpjEdGR\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Views\\",\\"col\\":4}},{\\"id\\":\\"2ZdtgxQZqq\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Customization\\",\\"col\\":4}},{\\"id\\":\\"NPFolijIcb\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Scripting\\",\\"col\\":4}},{\\"id\\":\\"BIHjudL0T_\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Modules\\",\\"col\\":4}},{\\"id\\":\\"iK3JQ9RXJE\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Packages\\",\\"col\\":4}},{\\"id\\":\\"TiO9FCUUeC\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"System Logs\\",\\"col\\":4}}]","public":1,"module":"Core","icon":"tool","indicator_color":"light-blue","is_hidden":0,"label":"Build","is_editable":true,"selected":true}', 'cmd': 'frappe.desk.desktop.get_desktop_page'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:14,176 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'page': '{"name":"Build","title":"Build","for_user":"","parent_page":"","content":"[{\\"id\\":\\"5nnLaQeoFa\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Get started</b><br></span>\\",\\"col\\":12}},{\\"id\\":\\"HXRmktXYHy\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"DocType\\",\\"col\\":3}},{\\"id\\":\\"pYALX3MwBW\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Customize Form\\",\\"col\\":3}},{\\"id\\":\\"XC78DuYB65\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Report\\",\\"col\\":3}},{\\"id\\":\\"XPm50Ppq3J\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Client Script\\",\\"col\\":3}},{\\"id\\":\\"yoU6nWiT83\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Server Script\\",\\"col\\":3}},{\\"id\\":\\"5UgFESBY0N\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Print Format Builder\\",\\"col\\":3}},{\\"id\\":\\"0gE0s-S70E\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"System Settings\\",\\"col\\":3}},{\\"id\\":\\"62hseENHbd\\",\\"type\\":\\"spacer\\",\\"data\\":{\\"col\\":12}},{\\"id\\":\\"tOCrOgLW1G\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Components to build your app</b></span>\\",\\"col\\":12}},{\\"id\\":\\"cJ6CVsa8qW\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Models\\",\\"col\\":4}},{\\"id\\":\\"MmEJpjEdGR\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Views\\",\\"col\\":4}},{\\"id\\":\\"2ZdtgxQZqq\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Customization\\",\\"col\\":4}},{\\"id\\":\\"NPFolijIcb\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Scripting\\",\\"col\\":4}},{\\"id\\":\\"BIHjudL0T_\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Modules\\",\\"col\\":4}},{\\"id\\":\\"iK3JQ9RXJE\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Packages\\",\\"col\\":4}},{\\"id\\":\\"TiO9FCUUeC\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"System Logs\\",\\"col\\":4}}]","public":1,"module":"Core","icon":"tool","indicator_color":"light-blue","is_hidden":0,"label":"Build","is_editable":true,"selected":true}', 'cmd': 'frappe.desk.desktop.get_desktop_page'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:14,226 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'page': '{"name":"Build","title":"Build","for_user":"","parent_page":"","content":"[{\\"id\\":\\"5nnLaQeoFa\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Get started</b><br></span>\\",\\"col\\":12}},{\\"id\\":\\"HXRmktXYHy\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"DocType\\",\\"col\\":3}},{\\"id\\":\\"pYALX3MwBW\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Customize Form\\",\\"col\\":3}},{\\"id\\":\\"XC78DuYB65\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Report\\",\\"col\\":3}},{\\"id\\":\\"XPm50Ppq3J\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Client Script\\",\\"col\\":3}},{\\"id\\":\\"yoU6nWiT83\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Server Script\\",\\"col\\":3}},{\\"id\\":\\"5UgFESBY0N\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Print Format Builder\\",\\"col\\":3}},{\\"id\\":\\"0gE0s-S70E\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"System Settings\\",\\"col\\":3}},{\\"id\\":\\"62hseENHbd\\",\\"type\\":\\"spacer\\",\\"data\\":{\\"col\\":12}},{\\"id\\":\\"tOCrOgLW1G\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Components to build your app</b></span>\\",\\"col\\":12}},{\\"id\\":\\"cJ6CVsa8qW\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Models\\",\\"col\\":4}},{\\"id\\":\\"MmEJpjEdGR\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Views\\",\\"col\\":4}},{\\"id\\":\\"2ZdtgxQZqq\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Customization\\",\\"col\\":4}},{\\"id\\":\\"NPFolijIcb\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Scripting\\",\\"col\\":4}},{\\"id\\":\\"BIHjudL0T_\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Modules\\",\\"col\\":4}},{\\"id\\":\\"iK3JQ9RXJE\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Packages\\",\\"col\\":4}},{\\"id\\":\\"TiO9FCUUeC\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"System Logs\\",\\"col\\":4}}]","public":1,"module":"Core","icon":"tool","indicator_color":"light-blue","is_hidden":0,"label":"Build","is_editable":true,"selected":true}', 'cmd': 'frappe.desk.desktop.get_desktop_page'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:14,256 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'page': '{"name":"Build","title":"Build","for_user":"","parent_page":"","content":"[{\\"id\\":\\"5nnLaQeoFa\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Get started</b><br></span>\\",\\"col\\":12}},{\\"id\\":\\"HXRmktXYHy\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"DocType\\",\\"col\\":3}},{\\"id\\":\\"pYALX3MwBW\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Customize Form\\",\\"col\\":3}},{\\"id\\":\\"XC78DuYB65\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Report\\",\\"col\\":3}},{\\"id\\":\\"XPm50Ppq3J\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Client Script\\",\\"col\\":3}},{\\"id\\":\\"yoU6nWiT83\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Server Script\\",\\"col\\":3}},{\\"id\\":\\"5UgFESBY0N\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Print Format Builder\\",\\"col\\":3}},{\\"id\\":\\"0gE0s-S70E\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"System Settings\\",\\"col\\":3}},{\\"id\\":\\"62hseENHbd\\",\\"type\\":\\"spacer\\",\\"data\\":{\\"col\\":12}},{\\"id\\":\\"tOCrOgLW1G\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Components to build your app</b></span>\\",\\"col\\":12}},{\\"id\\":\\"cJ6CVsa8qW\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Models\\",\\"col\\":4}},{\\"id\\":\\"MmEJpjEdGR\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Views\\",\\"col\\":4}},{\\"id\\":\\"2ZdtgxQZqq\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Customization\\",\\"col\\":4}},{\\"id\\":\\"NPFolijIcb\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Scripting\\",\\"col\\":4}},{\\"id\\":\\"BIHjudL0T_\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Modules\\",\\"col\\":4}},{\\"id\\":\\"iK3JQ9RXJE\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Packages\\",\\"col\\":4}},{\\"id\\":\\"TiO9FCUUeC\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"System Logs\\",\\"col\\":4}}]","public":1,"module":"Core","icon":"tool","indicator_color":"light-blue","is_hidden":0,"label":"Build","is_editable":true,"selected":true}', 'cmd': 'frappe.desk.desktop.get_desktop_page'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:14,288 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'page': '{"name":"Build","title":"Build","for_user":"","parent_page":"","content":"[{\\"id\\":\\"5nnLaQeoFa\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Get started</b><br></span>\\",\\"col\\":12}},{\\"id\\":\\"HXRmktXYHy\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"DocType\\",\\"col\\":3}},{\\"id\\":\\"pYALX3MwBW\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Customize Form\\",\\"col\\":3}},{\\"id\\":\\"XC78DuYB65\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Report\\",\\"col\\":3}},{\\"id\\":\\"XPm50Ppq3J\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Client Script\\",\\"col\\":3}},{\\"id\\":\\"yoU6nWiT83\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Server Script\\",\\"col\\":3}},{\\"id\\":\\"5UgFESBY0N\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Print Format Builder\\",\\"col\\":3}},{\\"id\\":\\"0gE0s-S70E\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"System Settings\\",\\"col\\":3}},{\\"id\\":\\"62hseENHbd\\",\\"type\\":\\"spacer\\",\\"data\\":{\\"col\\":12}},{\\"id\\":\\"tOCrOgLW1G\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Components to build your app</b></span>\\",\\"col\\":12}},{\\"id\\":\\"cJ6CVsa8qW\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Models\\",\\"col\\":4}},{\\"id\\":\\"MmEJpjEdGR\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Views\\",\\"col\\":4}},{\\"id\\":\\"2ZdtgxQZqq\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Customization\\",\\"col\\":4}},{\\"id\\":\\"NPFolijIcb\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Scripting\\",\\"col\\":4}},{\\"id\\":\\"BIHjudL0T_\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Modules\\",\\"col\\":4}},{\\"id\\":\\"iK3JQ9RXJE\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Packages\\",\\"col\\":4}},{\\"id\\":\\"TiO9FCUUeC\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"System Logs\\",\\"col\\":4}}]","public":1,"module":"Core","icon":"tool","indicator_color":"light-blue","is_hidden":0,"label":"Build","is_editable":true,"selected":true}', 'cmd': 'frappe.desk.desktop.get_desktop_page'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:14,317 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'page': '{"name":"Build","title":"Build","for_user":"","parent_page":"","content":"[{\\"id\\":\\"5nnLaQeoFa\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Get started</b><br></span>\\",\\"col\\":12}},{\\"id\\":\\"HXRmktXYHy\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"DocType\\",\\"col\\":3}},{\\"id\\":\\"pYALX3MwBW\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Customize Form\\",\\"col\\":3}},{\\"id\\":\\"XC78DuYB65\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Report\\",\\"col\\":3}},{\\"id\\":\\"XPm50Ppq3J\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Client Script\\",\\"col\\":3}},{\\"id\\":\\"yoU6nWiT83\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Server Script\\",\\"col\\":3}},{\\"id\\":\\"5UgFESBY0N\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Print Format Builder\\",\\"col\\":3}},{\\"id\\":\\"0gE0s-S70E\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"System Settings\\",\\"col\\":3}},{\\"id\\":\\"62hseENHbd\\",\\"type\\":\\"spacer\\",\\"data\\":{\\"col\\":12}},{\\"id\\":\\"tOCrOgLW1G\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Components to build your app</b></span>\\",\\"col\\":12}},{\\"id\\":\\"cJ6CVsa8qW\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Models\\",\\"col\\":4}},{\\"id\\":\\"MmEJpjEdGR\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Views\\",\\"col\\":4}},{\\"id\\":\\"2ZdtgxQZqq\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Customization\\",\\"col\\":4}},{\\"id\\":\\"NPFolijIcb\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Scripting\\",\\"col\\":4}},{\\"id\\":\\"BIHjudL0T_\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Modules\\",\\"col\\":4}},{\\"id\\":\\"iK3JQ9RXJE\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Packages\\",\\"col\\":4}},{\\"id\\":\\"TiO9FCUUeC\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"System Logs\\",\\"col\\":4}}]","public":1,"module":"Core","icon":"tool","indicator_color":"light-blue","is_hidden":0,"label":"Build","is_editable":true,"selected":true}', 'cmd': 'frappe.desk.desktop.get_desktop_page'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:14,346 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'page': '{"name":"Build","title":"Build","for_user":"","parent_page":"","content":"[{\\"id\\":\\"5nnLaQeoFa\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Get started</b><br></span>\\",\\"col\\":12}},{\\"id\\":\\"HXRmktXYHy\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"DocType\\",\\"col\\":3}},{\\"id\\":\\"pYALX3MwBW\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Customize Form\\",\\"col\\":3}},{\\"id\\":\\"XC78DuYB65\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Report\\",\\"col\\":3}},{\\"id\\":\\"XPm50Ppq3J\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Client Script\\",\\"col\\":3}},{\\"id\\":\\"yoU6nWiT83\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Server Script\\",\\"col\\":3}},{\\"id\\":\\"5UgFESBY0N\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Print Format Builder\\",\\"col\\":3}},{\\"id\\":\\"0gE0s-S70E\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"System Settings\\",\\"col\\":3}},{\\"id\\":\\"62hseENHbd\\",\\"type\\":\\"spacer\\",\\"data\\":{\\"col\\":12}},{\\"id\\":\\"tOCrOgLW1G\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Components to build your app</b></span>\\",\\"col\\":12}},{\\"id\\":\\"cJ6CVsa8qW\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Models\\",\\"col\\":4}},{\\"id\\":\\"MmEJpjEdGR\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Views\\",\\"col\\":4}},{\\"id\\":\\"2ZdtgxQZqq\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Customization\\",\\"col\\":4}},{\\"id\\":\\"NPFolijIcb\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Scripting\\",\\"col\\":4}},{\\"id\\":\\"BIHjudL0T_\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Modules\\",\\"col\\":4}},{\\"id\\":\\"iK3JQ9RXJE\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Packages\\",\\"col\\":4}},{\\"id\\":\\"TiO9FCUUeC\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"System Logs\\",\\"col\\":4}}]","public":1,"module":"Core","icon":"tool","indicator_color":"light-blue","is_hidden":0,"label":"Build","is_editable":true,"selected":true}', 'cmd': 'frappe.desk.desktop.get_desktop_page'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:14,376 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'page': '{"name":"Build","title":"Build","for_user":"","parent_page":"","content":"[{\\"id\\":\\"5nnLaQeoFa\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Get started</b><br></span>\\",\\"col\\":12}},{\\"id\\":\\"HXRmktXYHy\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"DocType\\",\\"col\\":3}},{\\"id\\":\\"pYALX3MwBW\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Customize Form\\",\\"col\\":3}},{\\"id\\":\\"XC78DuYB65\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Report\\",\\"col\\":3}},{\\"id\\":\\"XPm50Ppq3J\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Client Script\\",\\"col\\":3}},{\\"id\\":\\"yoU6nWiT83\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Server Script\\",\\"col\\":3}},{\\"id\\":\\"5UgFESBY0N\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Print Format Builder\\",\\"col\\":3}},{\\"id\\":\\"0gE0s-S70E\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"System Settings\\",\\"col\\":3}},{\\"id\\":\\"62hseENHbd\\",\\"type\\":\\"spacer\\",\\"data\\":{\\"col\\":12}},{\\"id\\":\\"tOCrOgLW1G\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Components to build your app</b></span>\\",\\"col\\":12}},{\\"id\\":\\"cJ6CVsa8qW\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Models\\",\\"col\\":4}},{\\"id\\":\\"MmEJpjEdGR\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Views\\",\\"col\\":4}},{\\"id\\":\\"2ZdtgxQZqq\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Customization\\",\\"col\\":4}},{\\"id\\":\\"NPFolijIcb\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Scripting\\",\\"col\\":4}},{\\"id\\":\\"BIHjudL0T_\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Modules\\",\\"col\\":4}},{\\"id\\":\\"iK3JQ9RXJE\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Packages\\",\\"col\\":4}},{\\"id\\":\\"TiO9FCUUeC\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"System Logs\\",\\"col\\":4}}]","public":1,"module":"Core","icon":"tool","indicator_color":"light-blue","is_hidden":0,"label":"Build","is_editable":true,"selected":true}', 'cmd': 'frappe.desk.desktop.get_desktop_page'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:14,406 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'page': '{"name":"Build","title":"Build","for_user":"","parent_page":"","content":"[{\\"id\\":\\"5nnLaQeoFa\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Get started</b><br></span>\\",\\"col\\":12}},{\\"id\\":\\"HXRmktXYHy\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"DocType\\",\\"col\\":3}},{\\"id\\":\\"pYALX3MwBW\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Customize Form\\",\\"col\\":3}},{\\"id\\":\\"XC78DuYB65\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Report\\",\\"col\\":3}},{\\"id\\":\\"XPm50Ppq3J\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Client Script\\",\\"col\\":3}},{\\"id\\":\\"yoU6nWiT83\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Server Script\\",\\"col\\":3}},{\\"id\\":\\"5UgFESBY0N\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Print Format Builder\\",\\"col\\":3}},{\\"id\\":\\"0gE0s-S70E\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"System Settings\\",\\"col\\":3}},{\\"id\\":\\"62hseENHbd\\",\\"type\\":\\"spacer\\",\\"data\\":{\\"col\\":12}},{\\"id\\":\\"tOCrOgLW1G\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Components to build your app</b></span>\\",\\"col\\":12}},{\\"id\\":\\"cJ6CVsa8qW\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Models\\",\\"col\\":4}},{\\"id\\":\\"MmEJpjEdGR\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Views\\",\\"col\\":4}},{\\"id\\":\\"2ZdtgxQZqq\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Customization\\",\\"col\\":4}},{\\"id\\":\\"NPFolijIcb\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Scripting\\",\\"col\\":4}},{\\"id\\":\\"BIHjudL0T_\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Modules\\",\\"col\\":4}},{\\"id\\":\\"iK3JQ9RXJE\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Packages\\",\\"col\\":4}},{\\"id\\":\\"TiO9FCUUeC\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"System Logs\\",\\"col\\":4}}]","public":1,"module":"Core","icon":"tool","indicator_color":"light-blue","is_hidden":0,"label":"Build","is_editable":true,"selected":true}', 'cmd': 'frappe.desk.desktop.get_desktop_page'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:14,434 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'page': '{"name":"Build","title":"Build","for_user":"","parent_page":"","content":"[{\\"id\\":\\"5nnLaQeoFa\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Get started</b><br></span>\\",\\"col\\":12}},{\\"id\\":\\"HXRmktXYHy\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"DocType\\",\\"col\\":3}},{\\"id\\":\\"pYALX3MwBW\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Customize Form\\",\\"col\\":3}},{\\"id\\":\\"XC78DuYB65\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Report\\",\\"col\\":3}},{\\"id\\":\\"XPm50Ppq3J\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Client Script\\",\\"col\\":3}},{\\"id\\":\\"yoU6nWiT83\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Server Script\\",\\"col\\":3}},{\\"id\\":\\"5UgFESBY0N\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Print Format Builder\\",\\"col\\":3}},{\\"id\\":\\"0gE0s-S70E\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"System Settings\\",\\"col\\":3}},{\\"id\\":\\"62hseENHbd\\",\\"type\\":\\"spacer\\",\\"data\\":{\\"col\\":12}},{\\"id\\":\\"tOCrOgLW1G\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Components to build your app</b></span>\\",\\"col\\":12}},{\\"id\\":\\"cJ6CVsa8qW\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Models\\",\\"col\\":4}},{\\"id\\":\\"MmEJpjEdGR\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Views\\",\\"col\\":4}},{\\"id\\":\\"2ZdtgxQZqq\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Customization\\",\\"col\\":4}},{\\"id\\":\\"NPFolijIcb\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Scripting\\",\\"col\\":4}},{\\"id\\":\\"BIHjudL0T_\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Modules\\",\\"col\\":4}},{\\"id\\":\\"iK3JQ9RXJE\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Packages\\",\\"col\\":4}},{\\"id\\":\\"TiO9FCUUeC\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"System Logs\\",\\"col\\":4}}]","public":1,"module":"Core","icon":"tool","indicator_color":"light-blue","is_hidden":0,"label":"Build","is_editable":true,"selected":true}', 'cmd': 'frappe.desk.desktop.get_desktop_page'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:14,464 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'page': '{"name":"Build","title":"Build","for_user":"","parent_page":"","content":"[{\\"id\\":\\"5nnLaQeoFa\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Get started</b><br></span>\\",\\"col\\":12}},{\\"id\\":\\"HXRmktXYHy\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"DocType\\",\\"col\\":3}},{\\"id\\":\\"pYALX3MwBW\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Customize Form\\",\\"col\\":3}},{\\"id\\":\\"XC78DuYB65\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Report\\",\\"col\\":3}},{\\"id\\":\\"XPm50Ppq3J\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Client Script\\",\\"col\\":3}},{\\"id\\":\\"yoU6nWiT83\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Server Script\\",\\"col\\":3}},{\\"id\\":\\"5UgFESBY0N\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"Print Format Builder\\",\\"col\\":3}},{\\"id\\":\\"0gE0s-S70E\\",\\"type\\":\\"shortcut\\",\\"data\\":{\\"shortcut_name\\":\\"System Settings\\",\\"col\\":3}},{\\"id\\":\\"62hseENHbd\\",\\"type\\":\\"spacer\\",\\"data\\":{\\"col\\":12}},{\\"id\\":\\"tOCrOgLW1G\\",\\"type\\":\\"header\\",\\"data\\":{\\"text\\":\\"<span style=\\\\\\"font-size: 18px; letter-spacing: 0.18px;\\\\\\"><b>Components to build your app</b></span>\\",\\"col\\":12}},{\\"id\\":\\"cJ6CVsa8qW\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Models\\",\\"col\\":4}},{\\"id\\":\\"MmEJpjEdGR\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Views\\",\\"col\\":4}},{\\"id\\":\\"2ZdtgxQZqq\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Customization\\",\\"col\\":4}},{\\"id\\":\\"NPFolijIcb\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Scripting\\",\\"col\\":4}},{\\"id\\":\\"BIHjudL0T_\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Modules\\",\\"col\\":4}},{\\"id\\":\\"iK3JQ9RXJE\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"Packages\\",\\"col\\":4}},{\\"id\\":\\"TiO9FCUUeC\\",\\"type\\":\\"card\\",\\"data\\":{\\"card_name\\":\\"System Logs\\",\\"col\\":4}}]","public":1,"module":"Core","icon":"tool","indicator_color":"light-blue","is_hidden":0,"label":"Build","is_editable":true,"selected":true}', 'cmd': 'frappe.desk.desktop.get_desktop_page'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:18,543 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:18,576 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:18,621 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:18,655 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:18,692 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:18,724 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:18,756 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:18,784 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:18,815 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:18,844 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:18,877 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:18,904 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:18,931 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:18,960 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:18,988 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:19,017 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:19,045 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:19,074 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:19,102 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:19,130 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:19,158 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:19,186 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:19,215 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:19,247 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'cmd': 'frappe.apps.get_apps'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
+2026-06-22 04:08:26,047 ERROR frappe Unable to load translations
+Site: bfarm.localhost
+Form Dict: {'doctype': 'User', 'with_parent': '1', 'cached_timestamp': '', 'cmd': 'frappe.desk.form.load.getdoctype'}
+Traceback (most recent call last):
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/utils/redis_wrapper.py", line 241, in hget
+    value = generator()
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 182, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 193, in get_translations_from_csv
+    return get_translation_dict_from_file(
+    	os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+    )
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 202, in get_translation_dict_from_file
+    csv_content = read_csv_file(path)
+  File "/workspace/development/beeyond/apps/frappe/frappe/translate.py", line 675, in read_csv_file
+    newdata = [[val for val in row] for row in data]
+                                               ^^^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 97: invalid continuation byte
